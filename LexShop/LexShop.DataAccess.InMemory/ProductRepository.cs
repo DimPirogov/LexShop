@@ -6,9 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using LexShop.Core.Models;
 
-{
-
-}
 
 namespace LexShop.DataAccess.InMemory
 {
