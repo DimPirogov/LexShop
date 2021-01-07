@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexShop.DataAccess.SQL", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexShop.DataAccess.InMemory", "LexShop.DataAccess.InMemory\LexShop.DataAccess.InMemory.csproj", "{1EA5E587-0470-4CC9-AE4D-2DF60BE4AD68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexShop.Web.UI", "LexShop.Web.UI\LexShop.Web.UI.csproj", "{07963665-F36C-4422-B8C4-A6A240D127F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexShop.WebUI", "LexShop.WebUI\LexShop.WebUI.csproj", "{1E754131-8A9B-4392-8B4B-5DD9A9541585}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{1EA5E587-0470-4CC9-AE4D-2DF60BE4AD68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EA5E587-0470-4CC9-AE4D-2DF60BE4AD68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EA5E587-0470-4CC9-AE4D-2DF60BE4AD68}.Release|Any CPU.Build.0 = Release|Any CPU
-		{07963665-F36C-4422-B8C4-A6A240D127F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07963665-F36C-4422-B8C4-A6A240D127F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07963665-F36C-4422-B8C4-A6A240D127F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07963665-F36C-4422-B8C4-A6A240D127F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E754131-8A9B-4392-8B4B-5DD9A9541585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E754131-8A9B-4392-8B4B-5DD9A9541585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E754131-8A9B-4392-8B4B-5DD9A9541585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E754131-8A9B-4392-8B4B-5DD9A9541585}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
