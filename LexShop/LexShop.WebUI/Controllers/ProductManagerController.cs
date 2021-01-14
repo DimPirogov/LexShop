@@ -13,10 +13,10 @@ namespace LexShop.WebUI.Controllers
 {
     public class ProductManagerController : Controller
     {
-        Core.Contracts.IRepository<Product> context;
-        Core.Contracts.IRepository<ProductCategory> productCategories;
+        IRepository<Product> context;
+        IRepository<ProductCategory> productCategories;
 
-        public ProductManagerController(Core.Contracts.IRepository<Product> productContext, Core.Contracts.IRepository<ProductCategory> productCategoryContext)
+        public ProductManagerController(IRepository<Product> productContext,IRepository<ProductCategory> productCategoryContext)
         {
             context = productContext;
             productCategories = productCategoryContext;
