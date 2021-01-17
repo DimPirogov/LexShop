@@ -86,7 +86,7 @@ namespace LexShop.WebUI.Controllers
                 if(file != null)
                 {
                     product.Image = product.Id + Path.GetExtension(file.FileName);
-                    file.SaveAs(Server.MapPath("//Content//ProductImages//") + productToEdit.Image);
+                    file.SaveAs(Server.MapPath("//Content//ProductImages") + productToEdit.Image);
                 }
                 productToEdit.Category = product.Category;
                 productToEdit.Description = product.Description;
