@@ -10,6 +10,7 @@ namespace LexShop.DataAccess.SQL.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            AutomaticMigrationDataLossAllowed = false;
         }
 
         protected override void Seed(LexShop.DataAccess.SQL.DataContext context)

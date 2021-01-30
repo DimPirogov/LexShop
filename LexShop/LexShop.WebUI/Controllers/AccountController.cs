@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using LexShop.WebUI.Models;
+using LexShop.Core.Models;
+using LexShop.Core.Contracts;
 
 namespace LexShop.WebUI.Controllers
 {
@@ -17,15 +19,10 @@ namespace LexShop.WebUI.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-
-        public AccountController()
+        private IRepository<Customer> customerRepository;
+        public AccountController(IRepository<Customer> customerRepository)
         {
-        }
-
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
-        {
-            UserManager = userManager;
-            SignInManager = signInManager;
+            this.customerRepository = customerRepository;
         }
 
         public ApplicationSignInManager SignInManager
@@ -155,6 +152,23 @@ namespace LexShop.WebUI.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    //5.Before we log the user in we want to add our customer account to  our user logging account
+
+                    Customer customer = new Customer()
+                    {
+                        //6. Copy everything from our customer model we just updated to our customer object
+                        City = model.City,
+                        Email = model.Email,
+                        FirstName = model.FirstName,
+                        LastName = model.LastName,
+                        State = model.Street,
+                        ZipCode = model.ZipCode,
+                        UserId = user.Id
+
+                    };
+                    //7. Insert our customer and save to database
+                    customerRepository.Insert(customer);
+                    customerRepository.Commit();
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
